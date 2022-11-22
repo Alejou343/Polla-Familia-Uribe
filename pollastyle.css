@@ -1,0 +1,93 @@
+body {
+    font-family: 'Quicksand';
+}
+
+.botonGuardar {
+    margin-top: 20px;
+    border-color: white;
+    font-size: 30px;
+    color: white;
+    background-image: url(./fondoQatar.jpg);
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+nav {
+    background-image: url(./fondoQatar.jpg);
+    border-radius: 10px;
+}
+
+.informacionApostador {
+    height: 20px;
+    display: flex;
+    margin-top: 0px;
+    
+}
+
+.informacionApostador p{ 
+    font-weight: bold;
+    
+}
+
+.informacionApostador p:nth-child(1){
+    margin-top: 0px;
+    margin-right: 10px;
+}
+
+.informacionApostador p:nth-child(3){
+    margin-top: 0px;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+
+.calendarioPartidos {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+
+.fechas {
+    margin-bottom: 50px;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.fechas a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    
+}
+
+.fechaPartido {
+    text-align: center;
+    padding: 10px;
+    border: 20px;
+    border-radius: 5px;
+    
+}
+
+.fechaPartido h2{
+    background-image: url(./fondoQatar.jpg);
+    color: white;
+}
+
+.fechaPartido p{
+    margin: 0;
+}
+
+.resultados {
+    display: flex;
+    padding: 10px;
+}
+
+#cuadrito {
+    height: 15px;
+    width: 15px;
+    
+}
