@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./pollastyle.css">
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Roboto+Condensed">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <title>Polla Familia Uribe QATAR 2022</title>
 </head>
@@ -33,7 +32,7 @@
 
     <div class="informacionApostador">
         <p>Nombre</p>
-        <input type="text">
+        <input type="text" id="nombreApostador">
     </div>
     
     <div class="calendarioPartidos">
@@ -42,13 +41,16 @@
         
             <div class="resultados">
                 <p>&nbsp <img src="https://flagcdn.com/28x21/qa.png"> &nbsp </p> 
-                <input type="text" id="cuadrito">
+                <input type="text" class="cuadrito" id="resultadoIL">
                 <p>&nbsp vs &nbsp </p>
-                <input type="text" id="cuadrito">
+                <input type="text" class="cuadrito" id="resultadoIR">
                 <p>&nbsp <img src="https://flagcdn.com/28x21/ec.png"> &nbsp </p>
             </div>
-            <input type="button" value="Guardar" class="botonGuardar">
+            <section class="boton">
+            <input type="button" value="Guardar" id="botonGuardar" class="botonGuardar">
+        </section>
         </div>
+        <script src="./database.js"></script>
 </div>
 </body>
 </html>
