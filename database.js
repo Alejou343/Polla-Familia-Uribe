@@ -1,12 +1,15 @@
-const botonGuardar = document.getElementById('botonGuardar');
+const botonGuardarResultados = document.getElementById('botonGuardarResultados');
 
-botonGuardar.addEventListener('click', guardarInformacionApuesta);
+botonGuardarResultados.addEventListener('click', guardarInformacionApuesta);
 
-
-
-function guardarInformacionApuesta() {
+function guardarInformacionApuesta () {
     
+    //NOMBRE DEL APOSTADOR
+
     const nombreApostador = document.getElementById('nombreApostador').value;
+    
+    //RESULTADOS DE EQUIPOS LOCALES
+
     const resultadoIL = parseInt(document.getElementById('resultadoIL').value);
     const resultadoIIL = parseInt(document.getElementById('resultadoIIL').value);
     const resultadoIIIL = parseInt(document.getElementById('resultadoIIIL').value);
@@ -42,10 +45,10 @@ function guardarInformacionApuesta() {
     const resultadoXXXIIIL = parseInt(document.getElementById('resultadoXXXIIIL').value);
     const resultadoXXXIVL = parseInt(document.getElementById('resultadoXXXIVL').value);
     const resultadoXXXVL = parseInt(document.getElementById('resultadoXXXVL').value);
-    const resultadoXXXVIL = parseInt(document.getElementById('resultadoLXXXVI').value);
+    const resultadoXXXVIL = parseInt(document.getElementById('resultadoXXXVIL').value);
     const resultadoXXXVIIL = parseInt(document.getElementById('resultadoXXXVIIL').value);
     const resultadoXXXVIIIL = parseInt(document.getElementById('resultadoXXXVIIIL').value);
-    const resultadoXXXIXL = parseInt(document.getElementById('resultadoXXXVIXL').value);
+    const resultadoXXXIXL = parseInt(document.getElementById('resultadoXXXIXL').value);
     const resultadoXLL = parseInt(document.getElementById('resultadoXLL').value);
     const resultadoXLIL = parseInt(document.getElementById('resultadoXLIL').value);
     const resultadoXLIIL = parseInt(document.getElementById('resultadoXLIIL').value);
@@ -55,6 +58,8 @@ function guardarInformacionApuesta() {
     const resultadoXLVIL = parseInt(document.getElementById('resultadoXLVIL').value);
     const resultadoXLVIIL = parseInt(document.getElementById('resultadoXLVIIL').value);
     const resultadoXLVIIIL = parseInt(document.getElementById('resultadoXLVIIIL').value);
+
+    // RESULTADOS DE EQUIPOS VISITANTES
 
     const resultadoIR = parseInt(document.getElementById('resultadoIR').value);
     const resultadoIIR = parseInt(document.getElementById('resultadoIIR').value);
@@ -93,7 +98,7 @@ function guardarInformacionApuesta() {
     const resultadoXXXVR = parseInt(document.getElementById('resultadoXXXVR').value);
     const resultadoXXXVIR = parseInt(document.getElementById('resultadoXXXVIR').value);
     const resultadoXXXVIIR = parseInt(document.getElementById('resultadoXXXVIIR').value);
-    const resultadoXXXVIIIR = parseInt(document.getElementById('resultadoRXXXVIII').value);
+    const resultadoXXXVIIIR = parseInt(document.getElementById('resultadoXXXVIIIR').value);
     const resultadoXXXIXR = parseInt(document.getElementById('resultadoXXXIXR').value);
     const resultadoXLR = parseInt(document.getElementById('resultadoXLR').value);
     const resultadoXLIR = parseInt(document.getElementById('resultadoXLIR').value);
@@ -105,47 +110,16 @@ function guardarInformacionApuesta() {
     const resultadoXLVIIR = parseInt(document.getElementById('resultadoXLVIIR').value);
     const resultadoXLVIIIR = parseInt(document.getElementById('resultadoXLVIIIR').value);
 
-        const informacionApuesta = [];
+    const informacionApuesta = [];
         
-        informacionApuesta.push ({
-        
-            Nombre: nombreApostador, Resultados: [[resultadoIL,resultadoIR], [resultadoIIL,resultadoIIR], [resultadoIIIL,resultadoIIIR], [resultadoIVL,resultadoIVR], [resultadoVL,resultadoVR], [resultadoVIL,resultadoVIR], [resultadoVIIL,resultadoVIIR], [resultadoVIIIL,resultadoVIIIR], [resultadoIXL,resultadoIXR],
-            [resultadoXL,resultadoXR], [resultadoXIL,resultadoXIR], [resultadoXIIL,resultadoXIIR], [resultadoXIIIL,resultadoXIIIR], [resultadoXIVL,resultadoXIVR], [resultadoXVL,resultadoXVR], [resultadoXVIL,resultadoXVIR], [resultadoXVIIL,resultadoXVIIR], [resultadoXVIIIL,resultadoXVIIIR],
-            [resultadoXIXL,resultadoXIXR], [resultadoXXL,resultadoXXR], [resultadoXXL,resultadoXXR], [resultadoXXIL,resultadoXXIR], [resultadoXXIIL,resultadoXXIIR], [resultadoXXIIIL,resultadoXXIIIR], [resultadoXXIVL,resultadoXXIVR], [resultadoXXVL,resultadoXXVR], [resultadoXXVIL,resultadoXXVIR],
-            [resultadoXXVIIL,resultadoXXVIIR], [resultadoXXVIIIL,resultadoXXVIIIR], [resultadoXXIXL,resultadoXXIXR], [resultadoXXXL,resultadoXXXR], [resultadoXXXIL,resultadoXXXIR], [resultadoXXXIIL,resultadoXXXIIR], [resultadoXXXIIIL,resultadoXXXIIIR], [resultadoXXXIVL,resultadoXXXIVR], [resultadoXXXVL,resultadoXXXVR],
-            [resultadoXXXVIL,resultadoXXXVIR], [resultadoXXXVIIL,resultadoXXXVIIR], [resultadoXXXVIIIL,resultadoXXXVIIIR], [resultadoXXXIXL,resultadoXXXIXR], [resultadoXLL,resultadoXLR], [resultadoXLIL,resultadoXLIR], [resultadoXLIIL,resultadoXLIIR], [resultadoXLIIIL,resultadoXLIIIR], [resultadoXLIVL,resultadoXLIVR],
-            [resultadoXLVL,resultadoXLVR], [resultadoXLVIL,resultadoXLVIR], [resultadoXLVIIL,resultadoXLVIIR], [resultadoXLVIIIL,resultadoXLVIIIR]]
-        })
+    informacionApuesta.push ({
+        Nombre: nombreApostador, Resultados: [[resultadoIL,resultadoIR], [resultadoIIL,resultadoIIR], [resultadoIIIL,resultadoIIIR], [resultadoIVL,resultadoIVR], [resultadoVL,resultadoVR], [resultadoVIL,resultadoVIR], [resultadoVIIL,resultadoVIIR], [resultadoVIIIL,resultadoVIIIR], [resultadoIXL,resultadoIXR],
+        [resultadoXL,resultadoXR], [resultadoXIL,resultadoXIR], [resultadoXIIL,resultadoXIIR], [resultadoXIIIL,resultadoXIIIR], [resultadoXIVL,resultadoXIVR], [resultadoXVL,resultadoXVR], [resultadoXVIL,resultadoXVIR], [resultadoXVIIL,resultadoXVIIR], [resultadoXVIIIL,resultadoXVIIIR],
+        [resultadoXIXL,resultadoXIXR], [resultadoXXL,resultadoXXR], [resultadoXXIL,resultadoXXIR], [resultadoXXIIL,resultadoXXIIR], [resultadoXXIIIL,resultadoXXIIIR], [resultadoXXIVL,resultadoXXIVR], [resultadoXXVL,resultadoXXVR], [resultadoXXVIL,resultadoXXVIR],
+        [resultadoXXVIIL,resultadoXXVIIR], [resultadoXXVIIIL,resultadoXXVIIIR], [resultadoXXIXL,resultadoXXIXR], [resultadoXXXL,resultadoXXXR], [resultadoXXXIL,resultadoXXXIR], [resultadoXXXIIL,resultadoXXXIIR], [resultadoXXXIIIL,resultadoXXXIIIR], [resultadoXXXIVL,resultadoXXXIVR], [resultadoXXXVL,resultadoXXXVR],
+        [resultadoXXXVIL,resultadoXXXVIR], [resultadoXXXVIIL,resultadoXXXVIIR], [resultadoXXXVIIIL,resultadoXXXVIIIR], [resultadoXXXIXL,resultadoXXXIXR], [resultadoXLL,resultadoXLR], [resultadoXLIL,resultadoXLIR], [resultadoXLIIL,resultadoXLIIR], [resultadoXLIIIL,resultadoXLIIIR], [resultadoXLIVL,resultadoXLIVR],
+        [resultadoXLVL,resultadoXLVR], [resultadoXLVIL,resultadoXLVIR], [resultadoXLVIIL,resultadoXLVIIR], [resultadoXLVIIIL,resultadoXLVIIIR]]
+    });
 
-        console.log(informacionApuesta)
-        console.log(resultadoIL + resultadoIR);
-
-    const resultadoPartidos = [[0,2], [6,2], [0,2], [1,1], [1,2], [0,0], [0,0], [4,1], [0,0], [1,2], [7,0], [2,1], [2,1],
-         [2,1],  [2,1],  [2,1],  [2,1],  [2,1],  [2,1],  [2,1], [2,1], [2,1], [2,1], [2,1], [2,1], [2,1], [2,1], [2,1], 
-         [2,1],  [2,1],  [2,1],  [2,1],  [2,1],  [2,1],  [2,1], [2,1],  [2,1], [2,1], [2,1], [2,1], [2,1], [2,1], [2,1], [2,1],
-         [2,1],  [2,1],  [2,1],  [2,1]
-    ]
-
-
-    console.log(resultadoPartidos);
-    console.log(informacionApuesta[0].Partido1);
-
-        const puntosGanados = [];
-
-    for (let i = 0; i < resultadoPartidos.length; i++) {
-    if (resultadoPartidos[i][0] == informacionApuesta[0].Partido1[0] && resultadoPartidos[i][1] == informacionApuesta[0].Partido1[1]) {     //Caso 1: adivinar marcador
-        console.log('Felicidades, en este partido sumaste 3 puntos');        
-
-    } else if (resultadoPartidos[i].reduce((a,b)=> a-b) < 0 && informacionApuesta[0].Partido1.reduce((a,b) => a-b) < 0) {
-        console.log('Sumaste un punto al adivinar el ganador [Visitante]');
-
-    } else if (resultadoPartidos[i].reduce((a,b)=> a-b) > 0 && informacionApuesta[0].Partido1.reduce((a,b) => a-b) > 0) {
-        console.log('Sumaste un punto al adivinar el ganador [Local]');
-    
-    } else if (resultadoPartidos[i].reduce((a,b) => a-b) == 0 && informacionApuesta[0].Partido1.reduce((a,b) => a-b) == 0 && resultadoPartidos.encuentro1[0] !== informacionApuesta[0].Partido1[0]){
-        console.log('Sumaste un punto al adivinar el resultado [Empate]');
-    } else {
-        console.log('No ganaste puntos rey');
-    }
-}
+    console.log(informacionApuesta);
 }

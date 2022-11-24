@@ -2,7 +2,7 @@ body {
     font-family: 'Quicksand';
 }
 
-.botonGuardar {
+.botonGuardar{
     margin-top: 20px;
     border-color: white;
     font-size: 30px;
@@ -19,29 +19,30 @@ body {
 nav {
     background-image: url(./fondoQatar.jpg);
     border-radius: 10px;
+    width: 100%;
 }
 
 .informacionApostador {
     height: 20px;
-    display: flex;
-    margin-top: 0px;
+    margin: 0 auto 60px;
+    
+    width: 100px;
+    text-align: center;
+    color: white;
     
 }
 
 .informacionApostador p{ 
     font-weight: bold;
+    background-image: url(./fondoQatar.jpg);
+    width: 110px;
+    
     
 }
 
-.informacionApostador p:nth-child(1){
-    margin-top: 0px;
-    margin-right: 10px;
-}
-
-.informacionApostador p:nth-child(3){
-    margin-top: 0px;
-    margin-right: 10px;
-    margin-left: 15px;
+.informacionApostador input{
+    width: 105px;
+    text-align: center;
 }
 
 .calendarioPartidos {
@@ -50,17 +51,17 @@ nav {
     justify-content: center;
 }
 
-.fechas {
+.barraNavegacion {
     margin-bottom: 50px;
-    width: 100%;
     text-align: center;
     
 }
 
-.fechas a {
+.barraNavegacion a {
     margin-left: 20px;
     text-decoration: none;
     color: white;
+    width: 100%;
     
 }
 
